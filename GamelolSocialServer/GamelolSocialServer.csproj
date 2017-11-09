@@ -8,9 +8,10 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>GamelolSocialServer</RootNamespace>
     <AssemblyName>GamelolSocialServer</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,7 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LitJson">
+      <HintPath>..\..\GamelolCenterServer\GamelolCenterServer\LitJson.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,8 +47,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AceNetFrame\ace\AbsHandleCenter.cs" />
+    <Compile Include="AceNetFrame\ace\auto\LengthEncoding.cs" />
+    <Compile Include="AceNetFrame\ace\auto\MessageEncoding.cs" />
+    <Compile Include="AceNetFrame\ace\auto\SocketModel.cs" />
+    <Compile Include="AceNetFrame\ace\ByteArray.cs" />
+    <Compile Include="AceNetFrame\ace\Delegate.cs" />
+    <Compile Include="AceNetFrame\ace\NetServer.cs" />
+    <Compile Include="AceNetFrame\ace\SendtoClient.cs" />
+    <Compile Include="AceNetFrame\ace\SerializeUtil.cs" />
+    <Compile Include="AceNetFrame\ace\UserToken.cs" />
+    <Compile Include="AceNetFrame\ace\UserTokenPool.cs" />
+    <Compile Include="HanderInterface.cs" />
+    <Compile Include="HandlerCenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\ConfigurationSetting.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
