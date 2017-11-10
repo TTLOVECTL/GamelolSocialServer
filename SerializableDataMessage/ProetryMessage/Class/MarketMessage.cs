@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace SerializableDataMessage
+using SerializableDataMessage.ProetryMessage.Enum;
+namespace SerializableDataMessage.ProetryMessage.Class
 {
     /// <summary>
     /// 商场信息类

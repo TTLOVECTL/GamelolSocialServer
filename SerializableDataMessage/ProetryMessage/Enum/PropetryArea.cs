@@ -4,21 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SerializableDataMessage
+namespace SerializableDataMessage.ProetryMessage.Enum
 {
     /// <summary>
-    /// 商场商品种类
+    /// 仓库、搭道具等的分类
     /// </summary>
-    public enum GoodType
+    public enum PropetryArea
     {
         /// <summary>
-        /// 符文
+        /// 商城信息变更
         /// </summary>
-        INSCRIPTION,
+        MARKET_AREA,
 
         /// <summary>
-        /// 英雄
+        /// 道具信息变更
         /// </summary>
-        HERO
+        PAOP_AREA
+
     }
 }

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace SerializableDataMessage.SocialMessage.Enum
 {
+    /// <summary>
+    /// 好友信息变更指令集
+    /// </summary>
     public enum FriendCommand
     {
         /// <summary>

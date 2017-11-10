@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace SerializableDataMessage.SocialMessage.Enum
 {
+    /// <summary>
+    /// 聊天信息发送指令集
+    /// </summary>
     public enum ChatCommand
     {
         /// <summary>

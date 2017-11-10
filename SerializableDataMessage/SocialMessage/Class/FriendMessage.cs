@@ -24,11 +24,16 @@ namespace SerializableDataMessage.SocialMessage.Class
         /// <summary>
         /// 好友是否在线
         /// </summary>
-        public string isOnline;
+        public bool isOnline;
 
         /// <summary>
         /// 好友头像
         /// </summary>
-        public byte[] headImage;
+        public string headImage;
+
+        /// <summary>
+        /// 好友账户是否存在
+        /// </summary>
+        public bool isExit;
     }
 }

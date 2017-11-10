@@ -6,6 +6,7 @@ using AceNetFrame.ace;
 using AceNetFrame.ace.auto;
 using System.Threading;
 using GamelolSocialServer.Util;
+using LitJson;
 namespace GamelolSocialServer
 {
     class Program
@@ -38,6 +39,7 @@ namespace GamelolSocialServer
             //SystemLogSystem.Instance.SendMessageToLogServer();
 
         }
+
 
     }
 }
