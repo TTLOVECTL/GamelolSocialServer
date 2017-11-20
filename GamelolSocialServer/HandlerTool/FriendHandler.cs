@@ -39,6 +39,7 @@ namespace GamelolSocialServer.HandlerTool
 
         private void AddFriendDeal(UserToken toke, SocketModel model) {
             ApplyMessage applyMessage = JsonMapper.ToObject<ApplyMessage>(model.getMessage<string>());
+
         }
 
         /// <summary>

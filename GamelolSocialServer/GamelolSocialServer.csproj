@@ -73,6 +73,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DatanbaseConnection\DatabaseConnection.csproj">
+      <Project>{35eacb99-8946-4ad5-828d-9455ca7adda1}</Project>
+      <Name>DatabaseConnection</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SerializableDataMessage\SerializableDataMessage.csproj">
       <Project>{100091d2-0f4f-493f-9635-191f74bad7bd}</Project>
       <Name>SerializableDataMessage</Name>
