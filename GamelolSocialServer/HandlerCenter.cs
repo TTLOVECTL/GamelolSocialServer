@@ -14,24 +14,29 @@ namespace GamelolSocialServer
         private HanderInterface friendHandler = null;
         private HanderInterface charHandler = null;
 
-        public static SortedDictionary<int, UserToken> playerToken = new SortedDictionary<int, UserToken>();
-
+        public static List<UserToken> centerServerToken = new List<UserToken>();
+        public static List<int> playerOnline = new List<int>();
         public HandlerCenter() {
             friendHandler = new FriendHandler();
             charHandler = new ChatHandler();
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="token"></param>
+        /// <param name="error"></param>
         public override void ClientClose(UserToken token, string error)
         {
-            Console.WriteLine("玩家ID:"+token.playerId+"断开了连接");
-            if (HandlerCenter.playerToken.ContainsKey(token.playerId)) {
-                HandlerCenter.playerToken.Remove(token.playerId);
-            }
+            Console.WriteLine("中心服务器断开了连接");
+            centerServerToken.Remove(token);
             
         }
 
         public override void MessageRecive(UserToken token, object message)
         {
             SocketModel model = message as SocketModel;
+            //Console.WriteLine(LitJson.JsonMapper.ToJson(model));
             switch ((SocialArea)model.area) {
                 case SocialArea.FRIEND_AREA:
                     friendHandler.MessageRecevie(token,model);

@@ -35,5 +35,10 @@ namespace SerializableDataMessage.SocialMessage.Class
         /// 好友账户是否存在
         /// </summary>
         public bool isExit;
+
+        /// <summary>
+        /// 是否已是自己的好友
+        /// </summary>
+        public bool isHave;
     }
 }

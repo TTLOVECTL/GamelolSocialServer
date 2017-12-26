@@ -61,6 +61,7 @@
     <Compile Include="SocialMessage\Class\ApplyMessage.cs" />
     <Compile Include="SocialMessage\Class\ChatMessage.cs" />
     <Compile Include="SocialMessage\Class\FriendMessage.cs" />
+    <Compile Include="SocialMessage\Class\OnlineMessage.cs" />
     <Compile Include="SocialMessage\Enum\ChatCommand.cs" />
     <Compile Include="SocialMessage\Enum\FriendCommand.cs" />
     <Compile Include="SocialMessage\Enum\SocialArea.cs" />

@@ -49,7 +49,6 @@ namespace DatabaseConnection.Database
                     playerBaseMessage.PlayerInscriptionNumber = int.Parse(reader[8].ToString());
                     break;
                 }
-
             }
             catch (Exception ex)
             {
@@ -79,9 +78,9 @@ namespace DatabaseConnection.Database
             {
                 mySqlConnection.Open();
                 reader = mySqlCommand.ExecuteReader();
-                playerBaseMessage = new PlayerBaseMessage();
                 while (reader.Read())
                 {
+                    playerBaseMessage = new PlayerBaseMessage();
                     playerBaseMessage.PlayerId = int.Parse(reader[0].ToString());
                     playerBaseMessage.PlayerName = reader[1].ToString();
                     playerBaseMessage.PlayerLevel = int.Parse(reader[2].ToString());

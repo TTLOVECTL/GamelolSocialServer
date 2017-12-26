@@ -7,6 +7,10 @@ using AceNetFrame.ace.auto;
 using System.Threading;
 using GamelolSocialServer.Util;
 using LitJson;
+using DatabaseConnection.Database;
+using DatabaseConnection.DataMessage;
+using System.Collections.Generic;
+
 namespace GamelolSocialServer
 {
     class Program
@@ -24,7 +28,7 @@ namespace GamelolSocialServer
                 server.serEncode = MessageEncoding.Encode;
                 server.center = new HandlerCenter();
                 server.init();
-                server.Start(int.Parse(ConfigurationSetting.GetConfigurationValue("centerServerPort")));
+                server.Start(int.Parse(ConfigurationSetting.GetConfigurationValue("socialServerPort")));
             }
             catch (Exception e)
             {
@@ -32,11 +36,17 @@ namespace GamelolSocialServer
                 Console.WriteLine(e.Source);
                 Console.WriteLine(e.Message);
             }
+            
+
             while (true)
             {
                 Thread.Sleep(60000000);
             }
+            
+
             //SystemLogSystem.Instance.SendMessageToLogServer();
+
+
 
         }
 

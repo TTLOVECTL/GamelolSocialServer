@@ -26,5 +26,14 @@ namespace SerializableDataMessage.SocialMessage.Class
         /// </summary>
         public string message;
 
+        /// <summary>
+        /// 发送时间
+        /// </summary>
+        public string sendTime;
+
+        public ChatMessage() {
+            sendTime= DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+        }
+
     }
 }

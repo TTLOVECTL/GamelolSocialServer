@@ -68,6 +68,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\ConfigurationSetting.cs" />
     <Compile Include="Util\ImageTransform.cs" />
+    <Compile Include="Util\InputFormat.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

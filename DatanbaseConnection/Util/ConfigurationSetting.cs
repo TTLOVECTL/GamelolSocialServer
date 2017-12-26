@@ -16,8 +16,6 @@ namespace DatabaseConnection.Util
         public static string GetConfigurationValue(string keyname) {
             string keyValue= ConfigurationManager.AppSettings[keyname];
             return keyValue;
-           
-
         }
     }
 }

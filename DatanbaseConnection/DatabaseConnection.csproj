@@ -51,12 +51,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database\BaseMessageDatabase.cs" />
+    <Compile Include="Database\ChatMessageDatabase.cs" />
     <Compile Include="Database\DatabaseConnnection.cs" />
     <Compile Include="Database\FriendMessageDatabase.cs" />
     <Compile Include="Database\InscriptionMessageDatabase.cs" />
     <Compile Include="Database\InscriptionPageMessageDatabase.cs" />
     <Compile Include="Database\LoginMessageDatabase.cs" />
     <Compile Include="DataMessage\PlayerBaseMessage.cs" />
+    <Compile Include="DataMessage\PlayerChatMessage.cs" />
     <Compile Include="DataMessage\PlayerFriendMessage.cs" />
     <Compile Include="DataMessage\PlayerInscriptionMessage.cs" />
     <Compile Include="DataMessage\PlayerInscriptionPageMessage.cs" />

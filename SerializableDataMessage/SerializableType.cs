@@ -12,6 +12,5 @@ namespace SerializableDataMessage
         PROPETRY_TYPE,
         SOCIAL_TYPE,
         MATCH_TYPE
-        
     }
 }

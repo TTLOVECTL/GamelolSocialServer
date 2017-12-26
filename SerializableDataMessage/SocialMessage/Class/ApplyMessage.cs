@@ -22,10 +22,28 @@ namespace SerializableDataMessage.SocialMessage.Class
         public int acceptId;
 
         /// <summary>
+        /// 申请信息ID
+        /// </summary>
+        public int messageid;
+
+        /// <summary>
+        /// 申请者昵称
+        /// </summary>
+        public string applyerName;
+
+        /// <summary>
+        /// 申请者头像
+        /// </summary>
+        public string headimage;
+
+        /// <summary>
         /// 被申请者是否同意
         /// </summary>
         public bool isAgree;
 
-
+        /// <summary>
+        /// 是否是请求加好友信息
+        /// </summary>
+        public bool isApply;
     }
 }

@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
-
+using GamelolSocialServer;
 
 namespace AceNetFrame.ace
 {
@@ -63,7 +63,7 @@ namespace AceNetFrame.ace
         /// </summary>
         public void init()
         {
-            Console.WriteLine("服务器已经启动，端口号为：【2002】");
+            Console.WriteLine("社交服务器已经启动，端口号为：【2003】");
             userPool = new UserTokenPool(100);
             maxAcceptClient = new Semaphore(userMax, userMax);
             if (serEncode == null || serDecode == null) throw new Exception(" message encode or decode is null");
@@ -128,6 +128,7 @@ namespace AceNetFrame.ace
             UserToken userToken = userPool.pop();
             Console.WriteLine("用户登录服务器");
             userToken.clientSocket = e.AcceptSocket;
+            HandlerCenter.centerServerToken.Add(userToken);
             StartReceive(userToken);
             StartAccept(e);
         }
